@@ -18,6 +18,50 @@ You can start editing the page by modifying `pages/index.tsx`. The page auto-upd
 
 The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
+
+## Details about packages
+
+`dotenv-safe` : </br>
+To validate the environment variables in order to ensure that all the necessary environment variables are defined in the .env.local file, we need to install the dotenv-safe package.
+
+`graphql` : </br>
+A query language and runtime which can be used in a Node.js server and the browser.
+
+`graphql-request` : </br>
+A minimalist GraphQL client similar to Axios but designed specifically for making GraphQL requests.
+
+`@graphql-codegen/cli` : </br>
+GraphQL Code Generator is a toolkit tailored to simplify and automate the generation of typed queries, subscriptions, and mutations for React, Next.js and other supported frontend frameworks.
+
+`@graphql-codegen/typescript` : </br>
+This plugin generates the base TypeScript types, depending on the structure of the GraphQL schema.
+
+`@graphql-codegen/typescript-operations` : </br>
+This plugin generates the TypeScript types for the Queries, Mutations, Subscriptions, and Fragments that are only in use.
+
+`@graphql-codegen/typescript-react-query` : </br>
+This plugin generates typed hooks for the various GraphQL operations.
+
+`apollo-server-micro` : </br>
+This plugin is the Micro integration for building the Apollo GraphQL server.
+
+`type-graphql` : </br>
+A Node.js framework for building GraphQL schema and resolvers using Typescript classes and decorators.
+
+`cors` : </br>
+A package to enable the Next.js GraphQL server to accept requests from cross-origin domains.
+
+`react-hook-form` : </br>
+A form validation library for React.js.
+
+`@hookform/resolvers` : </br>
+A React Hook Form validation resolvers for Zod, Yup, ...
+
+`zod` : </br>
+A TypeScript-first schema declaration and validation library.
+
+`axios` : </br>
+Axios is an HTTP client library used in both Node.js and the browser. It's also supports GraphQL requests.
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
