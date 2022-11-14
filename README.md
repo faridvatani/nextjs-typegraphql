@@ -62,6 +62,9 @@ A TypeScript-first schema declaration and validation library.
 
 `axios` : </br>
 Axios is an HTTP client library used in both Node.js and the browser. It's also supports GraphQL requests.
+
+`tailwind-merge` : </br>
+A library for merging Tailwind CSS classes.
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
