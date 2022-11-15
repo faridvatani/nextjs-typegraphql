@@ -65,6 +65,13 @@ Axios is an HTTP client library used in both Node.js and the browser. It's also 
 
 `tailwind-merge` : </br>
 A library for merging Tailwind CSS classes.
+
+`@typegoose/typegoose` : </br>
+A library that wraps around Mongoose to enable us to write Mongoose models using Typescript classes and decorators.
+
+`class-validator` : </br>
+A  library that allows you to use either decorator or non-decorator-based validation.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:

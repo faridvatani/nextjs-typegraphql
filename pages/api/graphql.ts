@@ -1,11 +1,11 @@
 import 'reflect-metadata';
 import { NextApiRequest, NextApiResponse } from 'next';
 import { ApolloServer } from 'apollo-server-micro';
-import { buildSchema, Query, Resolver } from 'type-graphql';
+import { buildSchema } from 'type-graphql';
 import Cors from 'cors';
+import { resolvers } from '../../server/resolvers';
 import { connectDB } from '../../server/utils/connectDB';
 
-// Setup cors
 const cors = Cors({
   methods: ['GET', 'HEAD', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
   credentials: true,
@@ -16,7 +16,6 @@ const cors = Cors({
   ],
 });
 
-// Middleware to run the cors configuration
 function runMiddleware(req: NextApiRequest, res: NextApiResponse, fn: any) {
   return new Promise((resolve, reject) => {
     fn(req, res, (result: any) => {
@@ -29,20 +28,18 @@ function runMiddleware(req: NextApiRequest, res: NextApiResponse, fn: any) {
   });
 }
 
-@Resolver()
-class HelloResolver {
-  @Query(() => String)
-  hello() {
-    return 'Hello World!';
-  }
-}
-
 const schema = await buildSchema({
-  resolvers: [HelloResolver],
+  resolvers,
+  dateScalarMode: 'isoDate',
 });
 
 const server = new ApolloServer({
   schema,
+  csrfPrevention: true,
+  context: ({ req, res }: { req: NextApiRequest; res: NextApiResponse }) => ({
+    req,
+    res,
+  }),
 });
 
 export const config = {
